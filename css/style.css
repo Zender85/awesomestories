@@ -228,7 +228,6 @@ header {
 }
 
 .mobile-header ul.menu li.menu-item a {
-  display: none;
   position: relative;
   color: #FFF;
   font-family: "Ek Mukta", sans-serif;
