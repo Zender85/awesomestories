@@ -24,6 +24,8 @@ h2 {
 }
 
 img {
+	width:expression(document.body.clientWidth > 100? "100%":
+ "auto");
 	max-width: 100%;
 }
 
@@ -320,6 +322,7 @@ header {
 
 main h2 {
 	position: relative;
+	margin-bottom: 50px;
 }
 
 main h2:after {
@@ -340,12 +343,15 @@ main h2:after {
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
+	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 }
 
 .news-item {
-	max-width: 290px;
+	width: 290px;
 	text-align: center;
 	margin: 0 10px;
 	margin-bottom: 40px;
@@ -355,9 +361,15 @@ main h2:after {
 	display: inline-block;
 	height: 225px;
 	overflow: hidden;
+	box-shadow: 2px 2px 9px #ccc;
+	transition: 0.6s;
 	
 }
+.news-photo:hover {
+	box-shadow: 0 0 4px #ccc;
+}
 .news img {
+	width: 100%;
 	transition: 0.7s;
 }
 .news img:hover {
@@ -531,8 +543,5 @@ main h2:after {
     height: 100vh;
     margin: 0;
     border-radius: 0px;
-  }
-  .mobile-header {
-    position: fixed;
   }
 }
