@@ -78,6 +78,7 @@ header {
 	text-decoration: none;
 	text-transform: uppercase;
 	font-size: 12px;
+	z-index: 2;
 }
 
 .search {
@@ -320,7 +321,7 @@ header {
 .header .burger-container {
   position: absolute;
   display: inline-block;
-  height: 50px;
+  height: 55px;
   width: 50px;
   right: 0;
   cursor: pointer;
@@ -336,7 +337,7 @@ header {
   z-index: 2;
 }
 .header .burger-container #burger {
-  width: 18px;
+  width: 22px;
   height: 8px;
   position: relative;
   display: block;
@@ -358,9 +359,13 @@ header {
   -webkit-transform: translateY(0px) rotate(0deg);
           transform: translateY(0px) rotate(0deg);
 }
+.header .burger-container #burger .bar.mdlBar {
+  -webkit-transform: translateY(4px) rotate(0deg);
+          transform: translateY(4px) rotate(0deg);
+}
 .header .burger-container #burger .bar.btmBar {
-  -webkit-transform: translateY(6px) rotate(0deg);
-          transform: translateY(6px) rotate(0deg);
+  -webkit-transform: translateY(8px) rotate(0deg);
+          transform: translateY(8px) rotate(0deg);
 }
 .header .icon {
   display: inline-block;
@@ -376,19 +381,7 @@ header {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
-.header .icon.icon-bag {
-  right: 0;
-  top: 0;
-  left: auto;
-  -webkit-transform: translateX(0px);
-          transform: translateX(0px);
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-  transition: -webkit-transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-  transition: transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-  transition: transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99), -webkit-transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-  -webkit-transition-delay: 0.65s;
-          transition-delay: 0.65s;
-}
+
 .header ul.menu {
   position: relative;
   display: block;
@@ -406,6 +399,7 @@ header {
   transition: transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99), opacity 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99);
   transition: transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99), opacity 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99), -webkit-transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
 }
+
 .header ul.menu li.menu-item:nth-child(1) {
   -webkit-transition-delay: 0.05s;
           transition-delay: 0.05s;
@@ -464,6 +458,9 @@ header {
 .header.menu-opened .burger-container #burger .bar.topBar {
   -webkit-transform: translateY(4px) rotate(45deg);
           transform: translateY(4px) rotate(45deg);
+}
+.header.menu-opened .burger-container #burger .bar.mdlBar {
+  display: none;
 }
 .header.menu-opened .burger-container #burger .bar.btmBar {
   -webkit-transform: translateY(3px) rotate(-45deg);
