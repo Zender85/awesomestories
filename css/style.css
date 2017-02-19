@@ -319,6 +319,22 @@ header {
 	margin: 0 auto;
 }
 
+main h2 {
+	position: relative;
+}
+
+main h2:after {
+	content: '';
+	position: absolute;
+	width: 104px;
+	height: 3px;
+	bottom: -10px;
+	right: 0;
+	left: 0;
+	margin: 0 auto;
+	background-image: url('../img/line.png');
+}
+
 .news {
 	display: -webkit-flex;
 	display: -moz-flex;
