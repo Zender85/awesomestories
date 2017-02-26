@@ -30,6 +30,7 @@ img {
 }
 
 .container {
+	position: relative;
 	max-width: 940px;
 	margin: 0 auto;
 	padding: 0 10px;
@@ -63,6 +64,7 @@ header {
 }
 
 .logo {
+	display: inline-block;
 	line-height: 0;
 	margin: 10px 0; 
 }
@@ -325,17 +327,17 @@ main h2 {
 	margin-bottom: 50px;
 }
 
-main h2:after {
+/*main h2:after {
 	content: '';
 	position: absolute;
 	width: 104px;
 	height: 3px;
-	bottom: -10px;
+	bottom: -12px;
 	right: 0;
 	left: 0;
 	margin: 0 auto;
 	background-image: url('../img/line.png');
-}
+}*/
 
 .news {
 	display: -webkit-flex;
@@ -518,6 +520,91 @@ main h2:after {
 	padding: 10px 0;
 }
 
+	/*==== POST PAGE ====*/
+
+.post-navigation {
+	padding-bottom: 50px;
+}
+
+.post-mainphoto {
+	max-width: 900px;
+	margin: 0 auto;
+	position: relative;
+	top: -25px;
+	line-height: 0;
+	box-shadow: 0 0 12px;
+	border: 7px solid #fff;
+	margin-bottom: -25px;
+}
+
+.post-intro {
+	position: relative;
+	font-style: italic;
+	font-size: 21px;
+	color: #5d5d5d;
+	width: 70%;
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.post-intro::before {
+	content: '';
+	position: absolute;
+	top: -20px;
+	width: 80%;
+	height: 2px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	background-image: url('../img/line.png');
+	background-size: cover; 
+}
+
+.post-intro::after {
+	content: '';
+	position: absolute;
+	bottom: -20px;
+	width: 80%;
+	height: 2px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	background-image: url('../img/line.png');
+	background-size: cover; 
+}
+
+.img-fright {
+	float: right;
+	width: 40%;
+	padding: 5px;
+	margin-left: 10px;
+	box-shadow: -4px 4px 10px -2px #b7b7b7;
+}
+
+.img-fleft {
+	float: left;
+	width: 40%;
+	padding: 5px;
+	margin-right: 10px;
+	box-shadow: 4px 4px 10px -2px #b7b7b7;
+}
+
+.post-image {
+	width: 80%;
+	margin: 0 auto;
+	padding: 5px;
+	line-height: 0;
+	box-shadow: 0 0 10px 0 #b7b7b7;
+}
+
+.post-end {
+	text-align: center;
+	width: 80%;
+	font-size: 25px;
+	margin: 20px auto;
+}
+
 @media all and (max-width: 640px){
 	.main-menu {
 		display: none;
@@ -538,10 +625,10 @@ main h2:after {
 }
 
 @media (max-width: 600px) {
-  {
-    width: 100%;
-    height: 100vh;
-    margin: 0;
-    border-radius: 0px;
-  }
+	.news-item {
+		margin: 0;
+	}
+	.post-intro {
+		width: 100%;
+	}
 }
