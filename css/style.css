@@ -532,9 +532,31 @@ main h2 {
 	position: relative;
 	top: -25px;
 	line-height: 0;
-	box-shadow: 0 0 12px;
+	box-shadow: 0 0 3px #cccccc;
 	border: 7px solid #fff;
 	margin-bottom: -25px;
+}
+
+.post-mainphoto::before,
+.post-mainphoto::after {
+	content: "";
+	position: absolute;
+	top: 80%;
+	bottom: 7px;
+	width: 45%;
+	background: #dddddd;
+  box-shadow: 0 15px 10px #555555;
+  z-index: -1;
+}
+
+.post-mainphoto::before {
+	left: 6px;
+	transform: rotate(-2deg);
+}
+
+.post-mainphoto::after {
+	right: 6px;
+	transform: rotate(2deg);
 }
 
 .post-intro {
