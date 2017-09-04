@@ -1,0 +1,5 @@
+$('.formBtn').on("click", function(){
+    $('body, html').animate({
+        scrollTop: $('section:nth-of-type(9)').position().top
+    },1000);
+});
