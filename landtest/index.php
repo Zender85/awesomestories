@@ -2,10 +2,7 @@
 <html>
 
 <head lang="en">
-<?php 
-$ip = $_SERVER['REMOTE_ADDR']; //Ip – клиента 
-$result = (array)json_decode(file_get_contents("http://ipinfo.io/{$ip}/json")); 
-?>
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Activator nadă Dynamite</title>
     <link rel="stylesheet" href="css/style.css">
@@ -19,11 +16,7 @@ $result = (array)json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
 <script type="text/javascript" src="http://cdn.leadbit.com/js/countries.js"></script>
 <script type="text/javascript" src="http://cdn.leadbit.com/js/jquery.js"></script>
 <script type="text/javascript" src="http://cdn.leadbit.com/js/leadbit.js"></script> -->
-<script>
-    var city = document.getElementById('user-city');
-    var citycode = <?php echo $result[city]; ?>;
-    city.innerHTML = citycode;
-</script>
+<script src="city.php"></script>
 <script src="jquery.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
     <script src="js/custom-functions.min.js" type="text/javascript"></script>
