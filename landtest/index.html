@@ -1,5 +1,11 @@
 <!DOCTYPE html>
-<html><head lang="en"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html>
+<!-- <?php 
+$ip = $_SERVER['REMOTE_ADDR']; //Ip – клиента 
+$result = (array)json_decode(file_get_contents("http://ipinfo.io/{$ip}/json")); 
+?> -->
+
+<head lang="en"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Activator nadă Dynamite</title>
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +18,9 @@
 <script type="text/javascript" src="http://cdn.leadbit.com/js/countries.js"></script>
 <script type="text/javascript" src="http://cdn.leadbit.com/js/jquery.js"></script>
 <script type="text/javascript" src="http://cdn.leadbit.com/js/leadbit.js"></script> -->
+<!-- <script>
+    var city = document.getElementById('co')
+</script> -->
 <script src="jquery.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
     <script src="js/custom-functions.min.js" type="text/javascript"></script>
@@ -329,7 +338,7 @@
                 </div>
                 <div class="freezing-buyer-info">
                     <div class="dynamic-info">
-                        <span class="freezing-buyer--name">Света</span>, <span id="user-city">Москва</span>
+                        <span class="freezing-buyer--name">Света</span>, <span id="user-city"></span>
                         <span class="freezing-buyer--flag flag_rus"></span>
                     </div>
                     <p></p>
