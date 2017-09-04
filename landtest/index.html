@@ -10,6 +10,7 @@
     <link href="css/custom-styles.min.css" type="text/css" rel="stylesheet">
 <!-- <script type="text/javascript" src="http://cdn.leadbit.com/js/geo/ro1.js"></script>
 <script type="text/javascript" src="http://cdn.leadbit.com/js/countries.js"></script>
+<script type="text/javascript" src="http://cdn.leadbit.com/js/jquery.js"></script>
 <script type="text/javascript" src="http://cdn.leadbit.com/js/leadbit.js"></script> -->
 <script src="jquery.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
@@ -30,6 +31,16 @@
         </div>
     </header>
     <!-- SECTION 1 -->
+    <script src="http://yastatic.net/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+  window.onload = function () {
+      jQuery("#user-city").text(ymaps.geolocation.city);
+      jQuery("#user-region").text(ymaps.geolocation.region);
+      jQuery("#user-country").text(ymaps.geolocation.country);
+  }
+</script>
+<script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+<!-- <div id="user-city"></div> <div id="user-region"></div> <div id="user-country"></div> -->
     <section>
         <div class="wrapper">
             <div>
@@ -318,7 +329,7 @@
                 </div>
                 <div class="freezing-buyer-info">
                     <div class="dynamic-info">
-                        <span class="freezing-buyer--name">Света</span>, <span class="freezing-buyer--town">Москва</span>
+                        <span class="freezing-buyer--name">Света</span>, <span id="user-city">Москва</span>
                         <span class="freezing-buyer--flag flag_rus"></span>
                     </div>
                     <p></p>
@@ -327,7 +338,7 @@
             </div>
         </div>
     <script src="js/buyer.js"></script>
-		<script src="js/buyer-script.js"></script>
+        <script src="js/buyer-script.js"></script>
         
 <script type="text/javascript" src="js/counter.js"></script>
 </body></html>
