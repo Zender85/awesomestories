@@ -1394,10 +1394,10 @@ footer p{
         }
     }
     
-    @media all and (max-width: 980px) {
+/*    @media all and (max-width: 980px) {
         .freezing-wrap {
             display: none !important;
         }
-    }
+    }*/
 
 
